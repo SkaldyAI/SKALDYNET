@@ -1,0 +1,100 @@
+---
+title: INTEL VAULT
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTEL | Sovereign Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #050505;
+            --skaldy-purple: #7b2cbf;
+            --text-gray: #e0e0e0;
+            --h-white: #ffffff;
+        }
+        body {
+            background-color: var(--obsidian);
+            color: var(--text-gray);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .vault-container {
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            color: var(--h-white);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            border-bottom: 2px solid var(--skaldy-purple);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        .post-link {
+            display: block;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #111;
+            border: 1px solid #333;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .post-link:hover {
+            border-color: var(--skaldy-purple);
+            box-shadow: 0 0 15px rgba(123, 44, 191, 0.2);
+        }
+        .post-title {
+            color: var(--h-white);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+        }
+        .post-date {
+            color: var(--skaldy-purple);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .post-summary {
+            color: var(--text-gray);
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--skaldy-purple);
+            text-decoration: none;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .back-link:hover {
+            text-shadow: 0 0 10px var(--skaldy-purple);
+        }
+    </style>
+</head>
+<body>
+    <div class="vault-container">
+        <a href="/" class="back-link"><< RETURN TO TERMINAL</a>
+        <h1>INTEL VAULT</h1>
+        
+        {% for post in site.posts %}
+        <a href="{{ post.url }}" class="post-link">
+            <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+            <h2 class="post-title">{{ post.title }}</h2>
+            <p class="post-summary">{{ post.summary }}</p>
+        </a>
+        {% endfor %}
+        
+    </div>
+</body>
+</html>
