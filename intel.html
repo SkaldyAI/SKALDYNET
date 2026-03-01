@@ -29,6 +29,18 @@ title: INTEL VAULT
             max-width: 800px;
             width: 100%;
         }
+        .logo-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 200px;
+            height: auto;
+            transition: 0.3s;
+        }
+        .logo:hover {
+            filter: drop-shadow(0 0 10px rgba(123, 44, 191, 0.5));
+        }
         h1 {
             color: var(--h-white);
             font-family: 'Roboto Mono', monospace;
@@ -72,7 +84,7 @@ title: INTEL VAULT
         }
         .back-link {
             display: inline-block;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: var(--skaldy-purple);
             text-decoration: none;
             font-family: 'Roboto Mono', monospace;
@@ -84,6 +96,12 @@ title: INTEL VAULT
 </head>
 <body>
     <div class="vault-container">
+        <div class="logo-header">
+            <a href="https://skaldy.net">
+                <img src="/logo.png" alt="SKALDY Logo" class="logo">
+            </a>
+        </div>
+        
         <a href="/" class="back-link"><< RETURN TO TERMINAL</a>
         <h1>INTEL VAULT</h1>
         
