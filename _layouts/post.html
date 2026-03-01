@@ -99,6 +99,32 @@
             padding-left: 20px;
             color: #aaa;
         }
+        
+        /* The Call to Action Button */
+        .contact-container {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            border-top: 1px solid #333;
+            padding-top: 50px;
+        }
+        .cta {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--skaldy-purple);
+            color: var(--h-white);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Roboto Mono', monospace;
+            letter-spacing: 2px;
+            background: rgba(123, 44, 191, 0.1);
+            transition: 0.3s;
+        }
+        .cta:hover {
+            background: var(--skaldy-purple);
+            box-shadow: 0 0 20px rgba(123, 44, 191, 0.5);
+            text-shadow: none;
+        }
     </style>
 </head>
 <body>
@@ -115,6 +141,10 @@
         
         <div class="content">
             {{ content }}
+        </div>
+        
+        <div class="contact-container">
+            <a href="mailto:stuart@skaldy.net" class="cta">INITIALIZE CONTACT</a>
         </div>
     </article>
 </body>
